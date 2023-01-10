@@ -40,6 +40,7 @@ kotlin {
             languageSettings.apply {
                 optIn("kotlin.RequiresOptIn")
                 optIn("kotlinx.coroutines.ExperimentalCoroutinesApi")
+                optIn("kotlin.time.ExperimentalTime")
             }
         }
 
@@ -67,7 +68,7 @@ kotlin {
                 implementation(libs.ktor.client.okHttp)
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependencies {
                 implementation(libs.bundles.shared.androidTest)
             }
